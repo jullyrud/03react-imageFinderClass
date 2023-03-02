@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import { Modal, Overlay } from './Modal.styled'
 
 export class ModalWindow extends Component {
@@ -6,7 +7,6 @@ export class ModalWindow extends Component {
     handleKeyDown = (e) => 
          {
             if(e.code === 'Escape'){
-                console.log('kjdfbnvdjvn;kdncsd');
              this.props.closeModal()
 
             }
@@ -31,4 +31,10 @@ export class ModalWindow extends Component {
     
 }
 
-
+ModalWindow.propTypes = {
+  closeModal: PropTypes.func.isRequired,
+  onModalClick: PropTypes.func.isRequired,
+  data: PropTypes.shape({
+    largeImageURL: PropTypes.string.isRequired,
+  }).isRequired,
+};

@@ -1,9 +1,9 @@
 import { RotatingLines } from 'react-loader-spinner'
-import { BtnWrap } from './Loader.styled'
+import { LoaderWrap } from './Loader.styled'
 
 export function Loader() {
     return (
-        <BtnWrap>
+        <LoaderWrap>
             <RotatingLines
             strokeColor="#3f51b5"
             strokeWidth="5"
@@ -11,7 +11,7 @@ export function Loader() {
             width="96"
             visible={true}
             />
-        </BtnWrap>
+        </LoaderWrap>
         
     )
 }

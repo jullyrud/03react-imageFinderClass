@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import { SearchBar, SearchForm, SearchFormInput, SearchFormButton, SearchFormButtonLabel } from './Searchbar.styled'
 import { BsArrowDownCircle } from "react-icons/bs";
 
@@ -27,3 +28,7 @@ export class Searchbar extends Component {
     )
     }
 }
+
+Searchbar.propTypes = {
+  onHandleSubmit: PropTypes.func.isRequired,
+};

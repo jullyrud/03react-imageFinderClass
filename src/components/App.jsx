@@ -34,6 +34,7 @@ export class App extends Component {
       q: query,
       isLoad: true,
       gallery: [],
+      erorOfSerch: false,
 
     })
     

@@ -38,8 +38,7 @@ export class App extends Component {
 
     })
     
-    setTimeout(() => {
-     try {
+   try {
        getGallery(query, page)
         .then(({ data }) => {
           if (data.hits.length === 0) {
@@ -50,9 +49,6 @@ export class App extends Component {
      } catch (error) {
         this.setState({ error: true })
      }
-      
-    }, 1000);
-
     
     this.setState(prevState => 
       ({page: prevState.page + 1})
@@ -78,7 +74,7 @@ export class App extends Component {
       }
 
       
-    }, 1000);
+    }, 500);
 
     this.setState(prevState => 
       ({page: prevState.page + 1})
@@ -114,7 +110,7 @@ export class App extends Component {
         {isLoad
           ? <Loader />
           : gallery.length > 0
-                    && <BtnLoadMore onClick={this.onLoadMoreBtnClick} >Load</BtnLoadMore>}
+                    && <BtnLoadMore onClick={this.onLoadMoreBtnClick} >Load More</BtnLoadMore>}
         
         
       </AppWrap>
